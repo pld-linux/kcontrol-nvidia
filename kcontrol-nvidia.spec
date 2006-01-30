@@ -1,7 +1,7 @@
 Summary:	Kcontrol module for NVidia's NV-Control extension
 Name:		kcontrol-nvidia
 Version:	0
-Release:	0.3
+Release:	0.4
 License:	GPL
 Group:		X11/Applications
 URL:		http://websvn.kde.org/trunk/kdenonbeta/nvidia/
@@ -39,7 +39,7 @@ rm -rf $RPM_BUILD_ROOT
     DESTDIR=$RPM_BUILD_ROOT
 
 # kde 3.5.1 already loads them as tabls in kcontrol module
-rm -f $RPM_BUILD_ROOT%{_desktopdir}/kde/{nvidia3d,nvidiadisplay}.desktop
+#rm -f $RPM_BUILD_ROOT%{_desktopdir}/kde/{nvidia3d,nvidiadisplay}.desktop
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -50,3 +50,5 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/kde3/kcm_nvidia3d.so
 %{_libdir}/kde3/kcm_nvidiadisplay.la
 %{_libdir}/kde3/kcm_nvidiadisplay.so
+%{_desktopdir}/kde/nvidia3d.desktop
+%{_desktopdir}/kde/nvidiadisplay.desktop
