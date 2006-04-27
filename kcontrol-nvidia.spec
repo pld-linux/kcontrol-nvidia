@@ -44,7 +44,7 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-# kde 3.5.1 already loads them as tabls in kcontrol module
+# kde 3.5.1 already loads them as tabs in kcontrol module
 #rm -f $RPM_BUILD_ROOT%{_desktopdir}/kde/{nvidia3d,nvidiadisplay}.desktop
 
 %clean
