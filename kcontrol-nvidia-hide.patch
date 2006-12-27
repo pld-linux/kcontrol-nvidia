@@ -1,0 +1,18 @@
+--- ./nvidia/nvidiadisplay.desktop~	2006-01-30 22:13:08.000000000 +0200
++++ ./nvidia/nvidiadisplay.desktop	2006-12-27 23:12:15.782442566 +0200
+@@ -5,6 +5,7 @@
+ X-KDE-Library=nvidiadisplay
+ X-KDE-FactoryName=nvidiadisplay
+ X-KDE-ParentApp=kcontrol
++NoDisplay=true
+ 
+ Categories=Qt;KDE;X-KDE-settings-peripherals;
+ 
+--- ./nvidia/nvidia3d.desktop~	2006-01-30 22:13:08.000000000 +0200
++++ ./nvidia/nvidia3d.desktop	2006-12-27 23:11:44.747231138 +0200
+@@ -57,4 +57,5 @@
+ X-KDE-ParentApp=kcontrol
+ X-KDE-SubstituteUID=false
+ X-KDE-Username=
++NoDisplay=true
+ Encoding=UTF-8
