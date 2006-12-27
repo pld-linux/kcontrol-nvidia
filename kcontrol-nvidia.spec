@@ -2,14 +2,17 @@ Summary:	Kcontrol module for NVidia's NV-Control extension
 Summary(pl):	Modu³ kcontrol dla rozszerzenia NV-Control sterowników NVIDIA
 Name:		kcontrol-nvidia
 Version:	0
-Release:	0.4
+Release:	0.5
 License:	GPL
 Group:		X11/Applications
 URL:		http://websvn.kde.org/trunk/kdenonbeta/nvidia/
 Source0:	nvidia-20060130.503942.tar.bz2
+Patch0:		%{name}-hide.patch
+Patch1:		kde-ac260.patch
+Patch2:		kde-ac260-lt.patch
+Patch3:		kde-common-PLD.patch
 # Source0-md5:	0ed43610bab3bbec2b4cf6999c1affe5
 BuildRequires:	libXNVCtrl-devel
-BuildRequires:	unsermake >= 051225
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -24,10 +27,13 @@ funkcjonalno¶æ aplikacji nvidia-settings (korzystaj±cej z GTK+).
 
 %prep
 %setup -q -n nvidia
+%patch0 -p1
+%patch1 -p1
+%patch2 -p1
+%patch3 -p1
 
 %build
 cp -f /usr/share/automake/config.sub admin
-export PATH=/usr/share/unsermake:$PATH
 %{__make} -f admin/Makefile.common cvs
 %configure \
 %if "%{_lib}" == "lib64"
@@ -43,9 +49,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
-
-# kde 3.5.1 already loads them as tabs in kcontrol module
-#rm -f $RPM_BUILD_ROOT%{_desktopdir}/kde/{nvidia3d,nvidiadisplay}.desktop
 
 %clean
 rm -rf $RPM_BUILD_ROOT
