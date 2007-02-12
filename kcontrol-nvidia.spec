@@ -1,5 +1,5 @@
 Summary:	Kcontrol module for NVidia's NV-Control extension
-Summary(pl):	Modu³ kcontrol dla rozszerzenia NV-Control sterowników NVIDIA
+Summary(pl.UTF-8):   ModuÅ‚ kcontrol dla rozszerzenia NV-Control sterownikÃ³w NVIDIA
 Name:		kcontrol-nvidia
 Version:	0
 Release:	0.5
@@ -20,10 +20,10 @@ This package contains kcontrol modules which provide access to the
 NV-CONTROL extension in NVIDIA's latest drivers - it duplicates the
 functionality of their nvidia-settings application (which uses GTK+).
 
-%description -l pl
-Ten pakiet zawiera modu³y kcontrol daj±ce dostêp do rozszerzenia
-NV-CONTROL w najnowszych sterownikach NVIDIA - powielaj±ce
-funkcjonalno¶æ aplikacji nvidia-settings (korzystaj±cej z GTK+).
+%description -l pl.UTF-8
+Ten pakiet zawiera moduÅ‚y kcontrol dajÄ…ce dostÄ™p do rozszerzenia
+NV-CONTROL w najnowszych sterownikach NVIDIA - powielajÄ…ce
+funkcjonalnoÅ›Ä‡ aplikacji nvidia-settings (korzystajÄ…cej z GTK+).
 
 %prep
 %setup -q -n nvidia
