@@ -1,5 +1,5 @@
 Summary:	Kcontrol module for NVidia's NV-Control extension
-Summary(pl.UTF-8):   Moduł kcontrol dla rozszerzenia NV-Control sterowników NVIDIA
+Summary(pl.UTF-8):	Moduł kcontrol dla rozszerzenia NV-Control sterowników NVIDIA
 Name:		kcontrol-nvidia
 Version:	0
 Release:	0.5
