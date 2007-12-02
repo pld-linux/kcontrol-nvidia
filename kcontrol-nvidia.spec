@@ -11,6 +11,7 @@ Patch0:		%{name}-hide.patch
 Patch1:		kde-ac260.patch
 Patch2:		kde-ac260-lt.patch
 Patch3:		kde-common-PLD.patch
+Patch4:		%{name}-am.patch
 # Source0-md5:	0ed43610bab3bbec2b4cf6999c1affe5
 BuildRequires:	libXNVCtrl-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -31,6 +32,7 @@ funkcjonalność aplikacji nvidia-settings (korzystającej z GTK+).
 %patch1 -p1
 %patch2 -p1
 %patch3 -p1
+%patch4 -p1
 
 %build
 cp -f /usr/share/automake/config.sub admin
